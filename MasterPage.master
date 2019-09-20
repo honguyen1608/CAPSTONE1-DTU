@@ -4,122 +4,122 @@
 
 <html>
 <head runat="server">
-   
     <title></title>
     <asp:ContentPlaceHolder id="head" runat="server">
-        <a href="HtmlPage.html">HtmlPage.html</a>
     </asp:ContentPlaceHolder>
+    <link href="CSS/StyleSheet.css" rel="stylesheet" type="text/css" />
     <style type="text/css">
+        .auto-style1 {
+            position: relative;
+            clear: both;
+            width: 253px;
+            left: 0px;
+            top: 0px;
+            height: 375px;
+            margin: 0 auto;
+            padding: 0px 0;
+        }
+        .auto-style2 {
+            width: 275px;
+            height: 428px;
+        }
+        .auto-style3 {
+            left: 0px;
+            top: 0px;
+            width: 251px;
+            height: 61px;
+        }
         .auto-style5 {
-            width: 99%;
-            height: 161px;
+            width: 70%;
         }
-        
-        .auto-style6 {
-            width: 1390px;
-            height: 150px;
-        }
-        
         .auto-style7 {
-            text-align: center;
+            width: 1304px;
+            height: 232px;
         }
-        
         .auto-style8 {
-            width: 211px;
+    
+            width: 100%;
         }
-        
-        .auto-style9 {
-            width: 674px;
-        }
-        
-    </style>
-
-    <link href="CSS/menu.css" rel="stylesheet" type="text/css" />
-
+        </style>
 </head>
-<body>
-    <form id="form1" runat="server">
-    <div>
-    </div>
-        <table class="auto-style5">
-            <tr>
-                <td>
-                  
-                   <br />
-                    <img alt="" class="auto-style6" src="images/Travel.jpg" contextmenu="adasdsa" /><br/>
-                    <div class="container">
-<nav>
-		<table style="width:100%;">
-            <tr>
-                <td class="auto-style8">
-                    <div class="container">
+<body style="height: 487px; width: 942px">
+    <table class="auto-style8"> 
+        <img alt="" class="auto-style7" src="Images/Untitled-1(2).jpg" />
+    </table>
+  
+        
+    <table style="height: 453px">
+        <tr>
+            <td>
+    <form id="form1" runat="server" class="auto-style2">
+        <div class="auto-style1">
 <nav>
 		<ul class="mcd-menu">
-			<li>
-				<a href="active">
+			<li class="auto-style3">
+				<a href="">
 					<i class="fa fa-home"></i>
 					<strong>Home</strong>
-					
+					<small>sweet home</small>
 				</a>
-			</li>
-			<li>
-				<a href="" class="active">
-					<i class="fa fa-edit"></i>
-					<strong>About us</strong>
-					
-				</a>
-			</li>
-			<li>
-				<a href="active">
-					<i class="fa fa-gift"></i>
-					<strong>Contact</strong>
-					
-				</a>
-			</li>
-			<li>
-				<a href="active">
-					<i class="fa fa-globe"></i>
-					<strong>Event</strong>
-					
-				</a>
-			</li>
-			<li>
-				<a href="active">
-					<i class="fa fa-comments-o"></i>
-					<strong>Tour</strong>
-					
-				</a>
-				<ul>
-					<li><a href="#"><i class="fa fa-globe"></i>....</a></li>
-					<li>
-						<a href="#"><i class="fa fa-group"></i>Our Team</a>
-						<ul>
-							<li><a href="#"><i class="fa fa-female"></i>....</a></li>
-							<li>
-								<a href="#"><i class="fa fa-male"></i>....</a>
-								<ul>
-									<li><a href="#"><i class="fa fa-leaf"></i>....</a></li>
-									<li><a href="#"><i class="fa fa-tasks"></i>....</a></li>
-								</ul>
-							</li>
-							<li><a href="#"><i class="fa fa-female"></i>....</a></li>
-						</ul>
-					</li>
-					<li><a href="#"><i class="fa fa-trophy"></i>....</a></li>
-					<li><a href="#"><i class="fa fa-certificate"></i>....</a></li>
-				</ul>
 			</li>
 			
 			<li>
 				<a href="">
+					<i class="fa fa-gift"></i>
+					<strong>Features</strong>
+					<small>sweet home</small>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<i class="fa fa-globe"></i>
+					<strong>News</strong>
+					<small>sweet home</small>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<i class="fa fa-comments-o"></i>
+					<strong>Blog</strong>
+					<small>what they say</small>
+				</a>
+				<ul>
+					<li><a href="#"><i class="fa fa-globe"></i>Mission</a></li>
+					<li>
+						<a href="#"><i class="fa fa-group"></i>Our Team</a>
+						<ul>
+							<li><a href="#"><i class="fa fa-female"></i>Leyla Sparks</a></li>
+							<li>
+								<a href="#"><i class="fa fa-male"></i>Gleb Ismailov</a>
+								<ul>
+									<li><a href="#"><i class="fa fa-leaf"></i>About</a></li>
+									<li><a href="#"><i class="fa fa-tasks"></i>Skills</a></li>
+								</ul>
+							</li>
+							<li><a href="#"><i class="fa fa-female"></i>Viktoria Gibbers</a></li>
+						</ul>
+					</li>
+					<li><a href="#"><i class="fa fa-trophy"></i>Rewards</a></li>
+					<li><a href="#"><i class="fa fa-certificate"></i>Certificates</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="">
+					<i class="fa fa-picture-o"></i>
+					<strong>Portfolio</strong>
+					<small>sweet home</small>
+				</a>
+			</li>
+			<li>
+				<a href="">
 					<i class="fa fa-envelope-o"></i>
 					<strong>Contacts</strong>
-					
+					<small>drop a line</small>
 				</a>
 			</li>
 			<li class="float">
 				<a class="search">
-					<input type="text" value="search things you want ...">
+					<input type="text" value="search ...">
 					<button><i class="fa fa-search"></i></button>
 				</a>
 				<a href="" class="search-mobile">
@@ -129,44 +129,19 @@
 		</ul>
 	</nav>
 </div>
-                    &nbsp;</td>
-                <td class="auto-style9">
-                    
-                    <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
-                        
-        
-            <p>
-                âscas</p>
-        
-        </asp:ContentPlaceHolder></td>
-                <td></td>
-            </tr>
-        </table>
-	</nav>
-</div>
-                    
-                    <br/>
-                    <strong>SD2H<br />
-                    Contact:    <h1 class="auto-style7">Your Travel, My TraVel.</h1><br />
-                    References:<br />
-                    coppy Right by @</strong></td>
-                <td>
-                  
-                    &nbsp;</td>
-                <td>
-                  
-                    &nbsp;</td>
-                <td>
-                  
-                    &nbsp;</td>
-                <td>
-                  
-                    &nbsp;</td>
-                <td>
-                  
-                    &nbsp;</td>
-            </tr>
-            </table>
+
     </form>
+    
+            </td>
+            <td class="auto-style5">
+               
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    <p>
+                        &nbsp;</p>
+                </asp:ContentPlaceHolder>
+               
+        </tr>
+    </table>
+    
 </body>
 </html>
