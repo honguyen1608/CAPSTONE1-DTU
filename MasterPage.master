@@ -32,22 +32,20 @@
         .auto-style5 {
             width: 70%;
         }
-        .auto-style7 {
-            width: 1304px;
-            height: 232px;
-        }
         .auto-style8 {
     
-            width: 100%;
+            width:1500px;
+            height: 150px;
+        }
+        .auto-style9 {
+            left: 385px;
+            top: 167px;
         }
         </style>
 </head>
 <body style="height: 487px; width: 942px">
-    <table class="auto-style8"> 
-        <img alt="" class="auto-style7" src="Images/Untitled-1(2).jpg" />
-    </table>
-  
-        
+                <div class="auto-style8"  style="background-image: url('/Images/images.jpg'); ">
+                </div>
     <table style="height: 453px">
         <tr>
             <td>
@@ -72,7 +70,7 @@
 			</li>
 			<li>
 				<a href="">
-					<i class="fa fa-globe"></i>
+					<i class="auto-style9"></i>
 					<strong>News</strong>
 					<small>sweet home</small>
 				</a>
@@ -131,6 +129,7 @@
 </div>
 
     </form>
+    
     
             </td>
             <td class="auto-style5">
