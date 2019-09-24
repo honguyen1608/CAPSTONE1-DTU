@@ -24,7 +24,7 @@
         </p>
         <p class="auto-style2">
             Mật khẩu&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :
-        <asp:TextBox ID="txtPass" runat="server" Height="16px" Width="320px"></asp:TextBox>
+        <asp:TextBox ID="txtPass" runat="server" Height="16px" Width="320px" TextMode="Password"></asp:TextBox>
         </p>
       
         <p style="text-align: center">
