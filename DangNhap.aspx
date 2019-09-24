@@ -1,39 +1,39 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="DangNhap.aspx.cs" Inherits="DangNhap" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="DangNhap.aspx.cs" Inherits="_Default" %>
 
-<script runat="server">
+<!DOCTYPE html>
 
-
-    
-</script>
-
-
-<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
     <style type="text/css">
-        .auto-style15 {
-            width: 301px;
+        .auto-style1 {
+            color: #000000;
         }
-        .auto-style16 {
-            width: 301px;
+        .auto-style2 {
             text-align: center;
         }
     </style>
-    </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <body>
+</head>
+<body>
+    <form id="form1" runat="server">
         <div>
-            <h1 style="text-align: center" class="auto-style15">ĐĂNG NHẬP</h1>
-            <div class="auto-style16">
-                <br />
-                Tên đăng nhập:&nbsp;&nbsp;<asp:TextBox ID="txtUserName" runat="server"></asp:TextBox>
-                <br />
-                Mật Khẩu:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:TextBox ID="txtPass" runat="server"></asp:TextBox>
-                <br />
-                <asp:Button ID="btn_login" runat="server" OnClick="Button1_Click" Text="Đăng nhập." />
-                <br />
-                <asp:Label ID="lb_thongBao" runat="server"></asp:Label>
-            </div>
+            <h1 style="text-align: center" class="auto-style1">ĐĂNG NHẬP</h1>
+        <p class="auto-style2">
+            Tên đăng nhập :
+        <asp:TextBox ID="txtLogin" runat="server" Height="19px" Width="305px"></asp:TextBox>
+        </p>
+        <p class="auto-style2">
+            Mật khẩu&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :
+        <asp:TextBox ID="txtPass" runat="server" Height="16px" Width="320px" TextMode="Password"></asp:TextBox>
+        </p>
+      
+        <p style="text-align: center">
+            <asp:Button ID="btnLogin" runat="server" OnClick="btnLogin_Click" Text="Đăng Nhập" style="color: #FFFFFF; text-align: left; background-color: #FF0000" />
+        </p>
+        <p style="text-align: left">
+            <asp:Label ID="lblThongBao" runat="server"></asp:Label>
+        </p>
         </div>
+    </form>
 </body>
-</asp:Content>
-
+</html>
