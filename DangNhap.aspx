@@ -6,33 +6,42 @@
 <head runat="server">
     <title></title>
     <style type="text/css">
-        .auto-style1 {
-            color: #000000;
-        }
         .auto-style2 {
             text-align: center;
         }
+        .auto-style5 {
+            width: 225px;
+            height: 225px;
+        }
     </style>
+    <link href="CSS/CSSLogin.css" rel="stylesheet" type="text/css" />
 </head>
-<body>
+<body class="main-bg">
     <form id="form1" runat="server">
-        <div>
-            <h1 style="text-align: center" class="auto-style1">ĐĂNG NHẬP</h1>
+        <div class="login-container text-c animated flipInX">
+                <div>
+                        <h1 ><img src="Images/Loginlogo.png" class="img" </h1>
+                </div>
+                    <h1>Sign In</h1>
+                <div class="container-content">
+                    <form class="margin-t">
+            <div class="form-group">
         <p class="auto-style2">
-            Tên đăng nhập :
-        <asp:TextBox ID="txtLogin" runat="server" Height="19px" Width="305px"></asp:TextBox>
+        <asp:TextBox ID="txtUser" runat="server" placeholder="Username" required="" Height="19px" Width="305px"></asp:TextBox>
         </p>
+                </div>
+                        <div class="form-group">
         <p class="auto-style2">
-            Mật khẩu&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :
-        <asp:TextBox ID="txtPass" runat="server" Height="16px" Width="320px" TextMode="Password"></asp:TextBox>
+        <asp:TextBox ID="txtPass" runat="server" placeholder="*****" required="" Height="19px" Width="305px" TextMode="Password"></asp:TextBox>
         </p>
-      
+      </div>
         <p style="text-align: center">
-            <asp:Button ID="btnLogin" runat="server" OnClick="btnLogin_Click" Text="Đăng Nhập" style="color: #FFFFFF; text-align: left; background-color: #FF0000" />
+            <asp:Button ID="btnLogin" runat="server" OnClick="btnLogin_Click" Text="Đăng Nhập" style="color: #FFFFFF; text-align: left; background-color: #996600" />
         </p>
-        <p style="text-align: left">
-            <asp:Label ID="lblThongBao" runat="server"></asp:Label>
-        </p>
+                        <a class="text-whitesmoke text-center" href="Register.aspx"><small>Do not have an account?</small></a>
+         </form>
+                    <p class="margin-t text-whitesmoke"><small> SD2H &copy; 2019-2020</small> </p>
+                </div>
         </div>
     </form>
 </body>

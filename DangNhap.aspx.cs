@@ -17,7 +17,7 @@ public partial class _Default : System.Web.UI.Page
     protected void btnLogin_Click(object sender, EventArgs e)
     {
         string[] vals = new string[]{
-                txtLogin.Text,
+                txtUser.Text,
                 txtPass.Text           
             };
         string[] parar = new string[]{
@@ -25,13 +25,11 @@ public partial class _Default : System.Web.UI.Page
                 "@MAT_KHAU"
             };
         DataTable ds = xl.docNhieuDL("TAIKHOAN", vals, parar);
-        if (ds.Rows.Count == 1)
         {
-            Session["taikhoan"] = txtLogin.Text;
+            Session["taikhoan"] = txtUser.Text;
             Response.Redirect("ViewDestinations.aspx");
         }
 
-        else
-            lblThongBao.Text = "Sai tài khoản hoặc mật khẩu!";
+        
     }
 }
