@@ -7,8 +7,15 @@ using System.Web.UI.WebControls;
 
 public partial class MasterPage : System.Web.UI.MasterPage
 {
+    LopXLDuLieu xl = new LopXLDuLieu();
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        if (!IsPostBack)
+        {
+            string[] values = new string[] { };
+            string[] para = new string[] { };
+            DataList1.DataSource = xl.docNhieuDL("docTenMien", values, para);
+            DataList1.DataBind();
+        }
     }
 }
