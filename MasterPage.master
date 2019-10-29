@@ -1,160 +1,274 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
 
-	<!DOCTYPE html>
-	<html lang="zxx" class="no-js">
-	<head>
-		<!-- Mobile Specific Meta -->
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<!-- Favicon-->
-		<link rel="shortcut icon" href="img/fav.png">
-		<!-- Author Meta -->
-		<meta name="author" content="colorlib">
-		<!-- Meta Description -->
-		<meta name="description" content="">
-		<!-- Meta Keyword -->
-		<meta name="keywords" content="">
-		<!-- meta character set -->
-		<meta charset="UTF-8">
-		<!-- Site Title -->
-		<title>Travel</title>
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+<head>
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/fav.png">
+    <!-- Author Meta -->
+    <meta name="author" content="colorlib">
+    <!-- Meta Description -->
+    <meta name="description" content="">
+    <!-- Meta Keyword -->
+    <meta name="keywords" content="">
+    <!-- meta character set -->
+    <meta charset="UTF-8">
+    <!-- Site Title -->
+    <title>Travel</title>
 
-		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
-			<!--
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+    <!--
 			CSS
 			============================================= -->
-			<link rel="stylesheet" href="css/linearicons.css">
-			<link rel="stylesheet" href="css/font-awesome.min.css">
-			<link rel="stylesheet" href="css/bootstrap.css">
-			<link rel="stylesheet" href="css/magnific-popup.css">
-			<link rel="stylesheet" href="css/jquery-ui.css">				
-			<link rel="stylesheet" href="css/nice-select.css">							
-			<link rel="stylesheet" href="css/animate.min.css">
-			<link rel="stylesheet" href="css/owl.carousel.css">				
-			<link rel="stylesheet" href="css/main.css">
-		</head>
-		<body>	
-			<header id="header">
-				<div class="header-top">
-					<div class="container">
-			  		<div class="row align-items-center">
-			  			<div class="col-lg-6 col-sm-6 col-6 header-top-right">
-							<%--<div class="header-social">
+    <link rel="stylesheet" href="css/linearicons.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link href="css/Khungchat.css" rel="stylesheet" />
+    <link href="css/Map.css" rel="stylesheet" />
+    <link href="css/bootstrap/boxchat.css" rel="stylesheet" type="text/css" />
+    <link href="css/ChatboxCss.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        .auto-style1 {
+            text-align: right;
+            width: 42px;
+            height: 20px;
+            margin-bottom: 0px;
+        }
+        .auto-style2 {
+            transition: all .4s ease-in-out;
+            position: fixed;
+            bottom: 0;
+            left: 50px;
+            z-index: 100000;
+            text-align: right;
+            border-left: 1px solid #A8A8A8;
+            border-right: 1px solid #A8A8A8;
+            border-top: 1px solid #A8A8A8;
+            border-bottom-style: none;
+            border-bottom-color: inherit;
+            border-bottom-width: medium;
+            margin-left: 0;
+            margin-right: 0;
+            margin-top: 0;
+            margin-bottom: -1500px;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 28px;
+            padding-bottom: 10px;
+            background: #fff;
+        }
+        .auto-style3 {
+            width: 156px;
+            height: 69px;
+            margin-right: 0px;
+        }
+    </style>
+    
+</head>
+       
+<body>
+    <header id="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-sm-6 col-6 header-top-right">
+                        <%--<div class="header-social">
 								<a href="#"><i class="fa fa-facebook"></i></a>
 								<a href="#"><i class="fa fa-twitter"></i></a>
 								<a href="#"><i class="fa fa-dribbble"></i></a>
 								<a href="#"><i class="fa fa-behance"></i></a>
 							</div>--%>
-			  			</div>
-			  		</div>			  					
-					</div>
-				</div>
-				<div class="container main-menu">
-					<div class="row align-items-center justify-content-between d-flex">
-				      <div id="logo">
-				        <a href="index.html"><img src="img/logo.png" alt="" title="" /></a>
-				      </div>
-				      <nav id="nav-menu-container">
-				        <ul class="nav-menu">
-				          <li><a href="HomePage.aspx">Trang Chủ</a></li>
-				         <%-- <li><a href="packages.html">Packages</a></li>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container main-menu">
+            <div class="row align-items-center justify-content-between d-flex">
+                <div id="logo">
+                    <a href="Homepage.aspx">
+                        <img src="img/logowebsite.jpg" alt="" title="" class="auto-style3" /></a>
+                </div>
+                <nav id="nav-menu-container">
+                    <ul class="nav-menu">
+                      
+                        <li><a href="HomePage.aspx">Trang Chủ</a></li>
+                        <%-- <li><a href="packages.html">Packages</a></li>
 				          <li><a href="hotels.html">Hotels</a></li>--%>
-				          <li><a href="ListDestination.aspx">Địa Điểm</a></li>
-				          <li class="menu-has-children"><a href="">Miền</a>
-				            <%--<ul>
+                        <li><a href="ListDestination.aspx">Địa Điểm</a></li>
+                        <li class="menu-has-children"><a href="">Miền</a>
+                            <%--<ul>
 				              <li><a href="blog-home.html">Blog Home</a></li>
 				              <li><a href="blog-single.html">Blog Single</a></li>
-				            </ul>--%>     
-                              <ul>
-                                  <asp:DataList ID="DataList1" runat="server" RepeatLayout="Flow">
-                            <ItemTemplate>
-                                  <li class="menu-has-children"><a href="ListDestination.aspx?id=<%#Eval("ID_MIEN") %>">
-                                      <asp:Label ID="Label1" runat="server" Text='<%# Eval("TEN_MIEN") %>'></asp:Label></a>
-                                 </li>
-                                  </ItemTemplate>
-                                      </asp:DataList>
-                              </ul>                              
-				          </li>	
-				          <li class="menu-has-children"><a href="">Pages</a>
-				            <ul>
-				            	  <li><a href="elements.html">Elements</a></li>
-						          <li class="menu-has-children"><a href="">Level 2 </a>
-						            <ul>
-						              <li><a href="#">Item One</a></li>
-						              <li><a href="#">Item Two</a></li>
-						            </ul>
-						          </li>					                		
-				            </ul>
-				          </li>					          					          		          
-				          <li><a href="contact.html">Contact</a></li>
-				        </ul>
-				      </nav><!-- #nav-menu-container -->					      		  
-					</div>
-				</div>
-			</header><!-- #header -->
-			
-			<!-- start banner Area -->
-			<section class="banner-area relative">
-				<div class="overlay overlay-bg"></div>				
-				<div class="container">
-					<div class="row fullscreen align-items-center justify-content-between">
-						<div class="col-lg-6 col-md-6 banner-left">
-							<h6 class="text-white">Away from monotonous life</h6>
-							<h1 class="text-white">Magical Travel</h1>
-							<p class="text-white">
-								If you are looking at blank cassettes on the web, you may be very confused at the difference in price. You may see some for as low as $.17 each.
-							</p>
-							<a href="#" class="primary-btn text-uppercase">Get Started</a>
-						</div>
-						<div class="col-lg-4 col-md-6 banner-right">
-							<ul class="nav nav-tabs" id="myTab" role="tablist">		 
-							  <li class="nav-item">
-							    <a class="nav-link" id="hotel-tab" data-toggle="tab" href="#hotel" role="tab" aria-controls="hotel" aria-selected="false">Hotels</a>
-							  </li>
-							  <li class="nav-item">
-							    <a class="nav-link" id="holiday-tab" data-toggle="tab" href="#holiday" role="tab" aria-controls="holiday" aria-selected="false">Holidays</a>
-							  </li>
-							</ul>
-							<div class="tab-content" id="myTabContent">
-							  <div class="tab-pane fade show active" id="flight" role="tabpanel" aria-labelledby="flight-tab">
-							  		<form class="form-wrap">
-									<input type="text" class="form-control" name="name" placeholder="From " onfocus="this.placeholder = ''" onblur="this.placeholder = 'From '">									
-									<input type="text" class="form-control" name="to" placeholder="To " onfocus="this.placeholder = ''" onblur="this.placeholder = 'To '">
-									<input type="text" class="form-control date-picker" name="start" placeholder="Start " onfocus="this.placeholder = ''" onblur="this.placeholder = 'Start '">
-									<input type="text" class="form-control date-picker" name="return" placeholder="Return " onfocus="this.placeholder = ''" onblur="this.placeholder = 'Return '">
-									<input type="number" min="1" max="20" class="form-control" name="adults" placeholder="Adults " onfocus="this.placeholder = ''" onblur="this.placeholder = 'Adults '">
-									<input type="number" min="1" max="20" class="form-control" name="child" placeholder="Child " onfocus="this.placeholder = ''" onblur="this.placeholder = 'Child '">						
-									<a href="#" class="primary-btn text-uppercase">Search Hotels</a>									
-								</form>							  	
-							  </div>
-							  <div class="tab-pane fade" id="holiday" role="tabpanel" aria-labelledby="holiday-tab">
-								<form class="form-wrap">
-									<input type="text" class="form-control" name="name" placeholder="From " onfocus="this.placeholder = ''" onblur="this.placeholder = 'From '">									
-									<input type="text" class="form-control" name="to" placeholder="To " onfocus="this.placeholder = ''" onblur="this.placeholder = 'To '">
-									<input type="text" class="form-control date-picker" name="start" placeholder="Start " onfocus="this.placeholder = ''" onblur="this.placeholder = 'Start '">
-									<input type="text" class="form-control date-picker" name="return" placeholder="Return " onfocus="this.placeholder = ''" onblur="this.placeholder = 'Return '">
-									<input type="number" min="1" max="20" class="form-control" name="adults" placeholder="Adults " onfocus="this.placeholder = ''" onblur="this.placeholder = 'Adults '">
-									<input type="number" min="1" max="20" class="form-control" name="child" placeholder="Child " onfocus="this.placeholder = ''" onblur="this.placeholder = 'Child '">							
-									<a href="#" class="primary-btn text-uppercase">Search Holidays</a>									
-								</form>							  	
-							  </div>
-							</div>
-						</div>
-					</div>
-				</div>					
-			</section>
-			<!-- End banner Area -->
-            <asp:ContentPlaceHolder id = "ContentPlaceHolder1" runat="server">
-        
-        
-			
-                </asp:ContentPlaceHolder>
-			<!-- End recent-blog Area -->			
+				            </ul>--%>
+                            <ul>
+                                <asp:DataList ID="DataList1" runat="server" RepeatLayout="Flow">
+                                    <ItemTemplate>
+                                        <li class="menu-has-children"><a href="ListDestination.aspx?id=<%#Eval("ID_MIEN") %>">
+                                            <asp:Label ID="Label1" runat="server" Text='<%# Eval("TEN_MIEN") %>'></asp:Label></a>
+                                             
+                                            <%--<ul>
+                                                <li>
+                                                    <a href="ListDestination.aspx?kv=<%#Eval("ID_KHU_VUC") %>">
+                                                       <asp:DropDownList ID="DropdownList" runat="server" Text='<%# Eval("TEN_KHU_VUC") %>'></asp:DropDownList></a>
+                             
+                                                    </li>
+                                            </ul>--%>
+                                       </li>
+                                    </ItemTemplate>
+                                </asp:DataList>
+                            </ul>
+                        </li>
+                        <%--<li class="menu-has-children"><a href="">Khu Vực</a>
+                            <ul>
+                                          <asp:ListView ID="ListView1" runat="server" RepeatLayout="Flow">
+                                              <ItemTemplate>
+                                                 <li>                             
+                                                  <a href="ListDestination.aspx?kv=<%#Eval("ID_KHU_VUC") %>">
+                                                <asp:Label ID="Label1" runat="server" Text='<%# Eval("TEN_KHU_VUC") %>'></asp:Label></a> 
+                                              </ItemTemplate>
+                                              </asp:ListView>
+                                      </ul>
+                        </li>--%>
+                        <li><a href="contact.html">Liên hệ</a></li>
+                    </ul>
+                </nav>
+                <!-- #nav-menu-container -->
+                      </div>
+        </div>
+    </header>
 
-			<!-- start footer Area -->		
-			<footer class="footer-area section-gap">
-				<div class="container">
+    
 
-					<%--<div class="row">
+    <!-- #header -->
+
+    <!-- start banner Area -->
+  
+    <section class="banner-area relative">
+        <div class="overlay overlay-bg"></div>
+        <div class="container">
+            <div class="row fullscreen align-items-center justify-content-between">
+                <div class="col-lg-6 col-md-6 banner-left">
+                   <%-- <h6 class="text-white">Away from monotonous life</h6>--%>
+                    <h1 class="text-white">MY TRAVEL</h1>
+                    <%--<p class="text-white">
+                        If you are looking at blank cassettes on the web, you may be very confused at the difference in price. You may see some for as low as $.17 each.
+                    </p>--%>
+                    <p class="text-white">
+                        Chăm sóc chuyến đi của bạn như chính cuả chúng tôi.
+                    </p>
+                    <a href="#" class="primary-btn text-uppercase">Bắt đầu</a>
+                </div>
+                <div class="col-lg-4 col-md-6 banner-right">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link" id="hotel-tab" data-toggle="tab" href="#hotel" role="tab" aria-controls="hotel" aria-selected="false">Hotels</a>
+                        </li>
+                        <%--<li class="nav-item">
+                            <a class="nav-link" id="holiday-tab" data-toggle="tab" href="#holiday" role="tab" aria-controls="holiday" aria-selected="false">Holidays</a>
+                        </li>--%>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="flight" role="tabpanel" aria-labelledby="flight-tab">
+                            <form class="form-wrap">
+                                <input type="text" class="form-control" name="name" placeholder="From " onfocus="this.placeholder = ''" onblur="this.placeholder = 'From '">
+                                <input type="text" class="form-control" name="to" placeholder="To " onfocus="this.placeholder = ''" onblur="this.placeholder = 'To '">
+                                <input type="text" class="form-control date-picker" name="start" placeholder="Start " onfocus="this.placeholder = ''" onblur="this.placeholder = 'Start '">
+                                <input type="text" class="form-control date-picker" name="return" placeholder="Return " onfocus="this.placeholder = ''" onblur="this.placeholder = 'Return '">
+                                <input type="number" min="1" max="20" class="form-control" name="adults" placeholder="Adults " onfocus="this.placeholder = ''" onblur="this.placeholder = 'Adults '">
+                                <input type="number" min="1" max="20" class="form-control" name="child" placeholder="Child " onfocus="this.placeholder = ''" onblur="this.placeholder = 'Child '">
+                                <a href="#" class="primary-btn text-uppercase">Search Hotels</a>
+                            </form>
+                        </div>
+                        <%--<div class="tab-pane fade" id="holiday" role="tabpanel" aria-labelledby="holiday-tab">
+                            <form class="form-wrap">
+                                <input type="text" class="form-control" name="name" placeholder="From " onfocus="this.placeholder = ''" onblur="this.placeholder = 'From '">
+                                <input type="text" class="form-control" name="to" placeholder="To " onfocus="this.placeholder = ''" onblur="this.placeholder = 'To '">
+                                <input type="text" class="form-control date-picker" name="start" placeholder="Start " onfocus="this.placeholder = ''" onblur="this.placeholder = 'Start '">
+                                <input type="text" class="form-control date-picker" name="return" placeholder="Return " onfocus="this.placeholder = ''" onblur="this.placeholder = 'Return '">
+                                <input type="number" min="1" max="20" class="form-control" name="adults" placeholder="Adults " onfocus="this.placeholder = ''" onblur="this.placeholder = 'Adults '">
+                                <input type="number" min="1" max="20" class="form-control" name="child" placeholder="Child " onfocus="this.placeholder = ''" onblur="this.placeholder = 'Child '">
+                                <a href="#" class="primary-btn text-uppercase">Search Holidays</a>
+                            </form>
+                        </div>--%>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End banner Area -->
+    <div id="chat" class="auto-style1"  onclick="loadChatbox()" style=": inherit">Chat</div>
+<div class="auto-style2" id="chatbox">
+<span class="chat-text">Travel Chat!</span>
+<script>
+//<![CDATA[
+document.write('<div id="smartchatbox_img901621879" ; width: 280px; height: 450px; overflow: hidden; margin: auto; padding: 0;">');
+document.write('<div id="smartchatbox901621879" style="width: 280px; height: 450px; overflow: hidden; margin: auto; padding: 0; border:0; ">');
+document.write('<iframe width="350" height="430" allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/c79393cc-a017-4992-b319-c2dfc94a82db" scrolling="no" frameborder="0" width="280px" height="450px" style="border:0; margin:0; padding: 0;">');
+document.write('</iframe></div></div>');
+//]]>
+</script>
+<div id="close-chat" onclick="closeChatbox()">&times;</div>
+<div id="minim-chat" onclick="minimChatbox()"><span class="minim-button">&minus;</span></div>
+<div id="maxi-chat" onclick="loadChatbox()"><span class="maxi-button">&plus;</span></div>
+</div>
+<script>
+//<![CDATA[
+function loadChatbox(){var e=document.getElementById("minim-chat");e.style.display="block";var e=document.getElementById("maxi-chat");e.style.display="none";var e=document.getElementById("chatbox");e.style.margin="0";}
+function closeChatbox(){var e=document.getElementById("chatbox");e.style.margin="0 0 -1500px 0";}
+function minimChatbox(){var e=document.getElementById("minim-chat");e.style.display="none";var e=document.getElementById("maxi-chat");e.style.display="block";var e=document.getElementById("chatbox");e.style.margin="0 0 -460px 0";}
+//]]>
+</script>
+ 
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+    <!-- End recent-blog Area -->
+      
+    <%--<div id="map" ></div>
+       <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUbFd1ZNOUDEAhfjZqI0SUyucZUBI7ie8&callback=initMap"
+  type="text/javascript"></script> --%>
+    <style>
+  #map {
+    height: 100%;
+  }
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+</style>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+  // The location of Uluru
+  var uluru = {lat: -25.344, lng: 131.036};
+  // The map, centered at Uluru
+  var map = new google.maps.Map(
+      document.getElementById('map'), {zoom: 4, center: uluru});
+  // The marker, positioned at Uluru
+  var marker = new google.maps.Marker({position: uluru, map: map});
+}
+    </script>
+    <!--Load the API from the specified URL
+    * The async attribute allows the browser to render the page while the API loads
+    * The key parameter will contain your own API key (which is not needed for this tutorial)
+    * The callback parameter executes the initMap() function
+    -->
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUbFd1ZNOUDEAhfjZqI0SUyucZUBI7ie8&callback=initMap">
+    </script>
+    <!-- start footer Area -->
+    <footer class="footer-area section-gap">
+        <div class="container">
+
+            <%--<div class="row">
 						<div class="col-lg-3  col-md-6 col-sm-6">
 							<div class="single-footer-widget">
 								<h6>About Agency</h6>
@@ -219,35 +333,39 @@
 							</div>
 						</div>						
 					</div>--%>
+            
+           <%--<iframe height="430" width="350" src="https://bot.dialogflow.com/f96ad684-30f0-4371-ad16-c380ec8189ba"></iframe>--%>
+            <div class="row footer-bottom d-flex justify-content-between align-items-center">
+                <p class="col-lg-8 col-sm-12 footer-text m-0">
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+                    All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i>by <a href="https://colorlib.com" target="_blank">SD2H</a>
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                </p>
+                <div class="col-lg-4 col-sm-12 footer-social">
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-dribbble"></i></a>
+                    <a href="#"><i class="fa fa-behance"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End footer Area -->
 
-					<div class="row footer-bottom d-flex justify-content-between align-items-center">
-						<p class="col-lg-8 col-sm-12 footer-text m-0"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">SD2H</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-						<div class="col-lg-4 col-sm-12 footer-social">
-							<a href="#"><i class="fa fa-facebook"></i></a>
-							<a href="#"><i class="fa fa-twitter"></i></a>
-							<a href="#"><i class="fa fa-dribbble"></i></a>
-							<a href="#"><i class="fa fa-behance"></i></a>
-						</div>
-					</div>
-				</div>
-			</footer>
-			<!-- End footer Area -->	
-
-			<script src="js/vendor/jquery-2.2.4.min.js"></script>
-			<script src="js/popper.min.js"></script>
-			<script src="js/vendor/bootstrap.min.js"></script>			
-			<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>		
- 			<script src="js/jquery-ui.js"></script>					
-  			<script src="js/easing.min.js"></script>			
-			<script src="js/hoverIntent.js"></script>
-			<script src="js/superfish.min.js"></script>	
-			<script src="js/jquery.ajaxchimp.min.js"></script>
-			<script src="js/jquery.magnific-popup.min.js"></script>						
-			<script src="js/jquery.nice-select.min.js"></script>					
-			<script src="js/owl.carousel.min.js"></script>							
-			<script src="js/mail-script.js"></script>	
-			<script src="js/main.js"></script>	
-		</body>
-	</html>
+    <script src="js/vendor/jquery-2.2.4.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/easing.min.js"></script>
+    <script src="js/hoverIntent.js"></script>
+    <script src="js/superfish.min.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/mail-script.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

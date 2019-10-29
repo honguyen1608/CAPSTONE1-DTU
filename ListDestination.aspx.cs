@@ -18,6 +18,12 @@ public partial class _Default : System.Web.UI.Page
                 DataList1.DataSource = xl.docNhieuDL("Pr_dsDiaDiemTheoMien", new string[] { Request.QueryString["id"] },
                new string[] { "@ID_MIEN" });
             DataList1.DataBind();
+            //if (Request.QueryString["kv"] == null)
+            //    DataList1.DataSource = xl.docNhieuDL("Pr_dsDiaDiem", new string[] { }, new string[] { });
+            //else
+            //    DataList1.DataSource = xl.docNhieuDL("Pr_dsDiaDiemTheoMien", new string[] { Request.QueryString["id"] },
+            //   new string[] { "@ID_MIEN" });
+            //DataList1.DataBind();
         }
     }
 }

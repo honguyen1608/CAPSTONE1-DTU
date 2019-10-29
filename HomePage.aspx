@@ -1,13 +1,14 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="HomePage.aspx.cs" Inherits="_Default" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <form id="form1" runat="server">
     <!-- Start popular-destination Area -->
 			<section class="popular-destination-area section-gap">
 				<div class="container">
 		            <div class="row d-flex justify-content-center">
 		                <div class="menu-content pb-70 col-lg-8">
 		                    <div class="title text-center">
-		                        <h1 class="mb-10">Popular Destinations</h1>
+		                        <h1 class="mb-10">Địa điểm du lịch nổi tiếng</h1>
 		                        <p>We all live in an age that belongs to the young at heart. Life that is becoming extremely fast, day.</p>
 		                    </div>
 		                </div>
@@ -378,8 +379,8 @@
 			<section class="home-about-area">
 				<div class="container-fluid">
 					<div class="row align-items-center justify-content-end">
-						<div class="col-lg-6 col-md-12 home-about-left">
-							<h1>
+						
+							<%--<h1>
 								Did not find your Package? <br>
 								Feel free to ask us. <br>
 								We‘ll make it for you
@@ -391,7 +392,23 @@
 						</div>
 						<div class="col-lg-6 col-md-12 home-about-right no-padding">
 							<img class="img-fluid" src="img/about-img.jpg" alt="">
-						</div>
+						</div>--%>
+                            <asp:Repeater ID="Repeater1" runat="server">
+                                <ItemTemplate>
+                                    <div class="col-lg-6 col-md-12 home-about-left">
+                                    <h1>
+                                        <%#Eval("TEN_SU_KIEN") %>
+                                    </h1>
+                                    <p>  
+                                        <%#Eval("CHI_TIET") %>
+                                    </p>
+                                   </div>
+                                    <div class="col-lg-6 col-md-12 home-about-right no-padding">
+                                        <a href="ChitietSuKien.aspx?id=<%#Eval("ID_SU_KIEN") %>">
+                                        <asp:Image ID="Image1" runat="server" Height="250px" Width="350px" ImageUrl='<%# "./Images/"+ Eval("HINH_ANH_SU_KIEN") %>' /></a>
+                                    </div>
+                                </ItemTemplate>
+                            </asp:Repeater>
 					</div>
 				</div>	
 			</section>
@@ -404,7 +421,7 @@
 					<div class="row d-flex justify-content-center">
 						<div class="menu-content pb-60 col-lg-9">
 							<div class="title text-center">
-								<h1 class="mb-10">Latest from Our Blog</h1>
+								<%--<h1 class="mb-10">Latest from Our Blog</h1>
 								<p>With the exception of Nietzsche, no other madman has contributed so much to human sanity as has.</p>
 							</div>
 						</div>
@@ -541,12 +558,35 @@
 										Acres of Diamonds… you’ve read the famous story, or at least had it related to you. A farmer.
 									</p>
 									<h6 class="date">31st January,2018</h6>
-								</div>	
+								</div>--%>	
+                                
+                                <asp:DataList ID="DataList2"  runat="server" RepeatColumns="4" RepeatDirection="Horizontal" >
+                                    <ItemTemplate>
+                                       
+                                            <div class="thumb">
+                                               <a href="ChitietSuKien.aspx?id=<%#Eval("ID_SU_KIEN") %>">
+                                        <asp:Image ID="Image1" runat="server" Height="180px" Width="200px" ImageUrl='<%# "./Images/"+ Eval("HINH_ANH_SU_KIEN") %>' /></a>
+                                                </div>
+                                            <h4 class="title" 
+                                                <%#Eval("TEN_SU_KIEN")%>
+                                                
+                                            </h4>
+                                            <%--<p>
+                                                <%#Eval("MO_TA") %>
+                                            </p>--%>
+                                        </div>
+                                    </div>
+                                    </ItemTemplate>
+                                </asp:DataList>
+                                    
+							    <br />
+                                    
 							</div>														
 
 						</div>
 					</div>
 				</div>	
 			</section>
+    </form>
 </asp:Content>
 
