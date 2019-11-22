@@ -1,0 +1,59 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterAdmin.master.cs" Inherits="MasterAdmin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 1311px;
+            height: 557px;
+        }
+        .auto-style2 {
+            font-weight: bold;
+        }
+        .auto-style3 {
+            font-weight: bold;
+            margin-left: 0px;
+        }
+        .auto-style4 {
+            text-align: center;
+        }
+        .auto-style6 {
+            height: 555px;
+        }
+        .auto-style7 {
+            height: 555px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <table style="width:100%;">
+            <tr>
+                <td class="auto-style7">
+                    <img alt="" src="" /><img alt="" class="auto-style1" src="Images/du-lich-da-nang-vntrip.jpg" /></td>
+                <td class="auto-style6"></td>
+                <td class="auto-style6"></td>
+            </tr>
+            <tr>
+                <td class="auto-style4"><strong>
+            <asp:Button ID="btnCNdiadiem" runat="server" OnClick="btnCNdiadiem_Click" Text="  Cập nhập địa điểm" style="color: #FFFFFF; text-align: left; background-color: #996600" Height="37px" Width="147px" CssClass="auto-style3" />
+            <asp:Button ID="btnCNsukien" runat="server" OnClick="btnCNsukien_Click" Text="  Cập nhập sự kiện" style="color: #FFFFFF; text-align: left; background-color: #996600" Height="37px" Width="147px" CssClass="auto-style2" />
+                    </strong></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
