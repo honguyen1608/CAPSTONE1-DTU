@@ -33,20 +33,24 @@
     <link rel="stylesheet" href="css/main.css">
     <link href="css/Khungchat.css" rel="stylesheet" />
     <link href="css/Map.css" rel="stylesheet" />
+    <link href="css/CSSMasterPage.css" rel="stylesheet" />
     <link href="css/bootstrap/boxchat.css" rel="stylesheet" type="text/css" />
     <link href="css/ChatboxCss.css" rel="stylesheet" type="text/css" />
+    <link href="css/testchatbot.css" rel="stylesheet" />
     <style type="text/css">
         .auto-style1 {
-            text-align: right;
-            width: 42px;
-            height: 20px;
+            float: right;
+            margin-left: 10px;
+            text-align: left;
+            width: 268px;
+            height: 150px;
             margin-bottom: 0px;
         }
         .auto-style2 {
             transition: all .4s ease-in-out;
             position: fixed;
             bottom: 0;
-            left: 50px;
+            left: 30px;
             z-index: 100000;
             text-align: right;
             border-left: 1px solid #A8A8A8;
@@ -55,7 +59,7 @@
             border-bottom-style: none;
             border-bottom-color: inherit;
             border-bottom-width: medium;
-            margin-left: 0;
+            margin-left: 30px;
             margin-right: 0;
             margin-top: 0;
             margin-bottom: -1500px;
@@ -64,16 +68,33 @@
             padding-top: 28px;
             padding-bottom: 10px;
             background: #fff;
+             
         }
         .auto-style3 {
             width: 156px;
             height: 69px;
             margin-right: 0px;
         }
+        .auto-style10
+        {
+            margin-left:auto;
+            margin-right:auto;
+            margin-top:auto;
+            margin-bottom:auto;
+            font-display:block;
+            text-align:center;
+            font-family:Helvetica,Arial;
+            font-size:15px;
+        }
+        .auto-style11
+        {
+            display:block;
+            margin-left:auto;
+            margin-right:auto;
+        }
     </style>
     
-</head>
-       
+</head> 
 <body>
     <header id="header">
         <div class="header-top">
@@ -98,34 +119,33 @@
                 </div>
                 <nav id="nav-menu-container">
                     <ul class="nav-menu">
-                      
                         <li><a href="HomePage.aspx">Trang Chủ</a></li>
                         <%-- <li><a href="packages.html">Packages</a></li>
 				          <li><a href="hotels.html">Hotels</a></li>--%>
                         <li><a href="ListDestination.aspx">Địa Điểm</a></li>
-                        <li class="menu-has-children"><a href="">Miền</a>
+                        <%--<li class="menu-has-children"><a href="">Miền</a>
                             <%--<ul>
 				              <li><a href="blog-home.html">Blog Home</a></li>
 				              <li><a href="blog-single.html">Blog Single</a></li>
-				            </ul>--%>
+				            </ul>
                             <ul>
-                                <asp:DataList ID="DataList1" runat="server" RepeatLayout="Flow">
-                                    <ItemTemplate>
-                                        <li class="menu-has-children"><a href="ListDestination.aspx?id=<%#Eval("ID_MIEN") %>">
-                                            <asp:Label ID="Label1" runat="server" Text='<%# Eval("TEN_MIEN") %>'></asp:Label></a>
-                                             
-                                            <%--<ul>
+                            <asp:DataList ID="DataList1" runat="server" RepeatLayout="Flow">
+                                <ItemTemplate>
+                                    <li class="menu-has-children"><a href="ListDestination.aspx?id=<%#Eval("ID_MIEN") %>">
+                                        <asp:Label ID="Label1" runat="server" Text='<%# Eval("TEN_MIEN") %>'></asp:Label></a>
+
+                                        <ul>
                                                 <li>
                                                     <a href="ListDestination.aspx?kv=<%#Eval("ID_KHU_VUC") %>">
                                                        <asp:DropDownList ID="DropdownList" runat="server" Text='<%# Eval("TEN_KHU_VUC") %>'></asp:DropDownList></a>
                              
                                                     </li>
-                                            </ul>--%>
-                                       </li>
-                                    </ItemTemplate>
-                                </asp:DataList>
-                            </ul>
-                        </li>
+                                            </ul>
+                                    </li>
+                                </ItemTemplate>
+                            </asp:DataList>
+                        </ul>--%>
+                       
                         <%--<li class="menu-has-children"><a href="">Khu Vực</a>
                             <ul>
                                           <asp:ListView ID="ListView1" runat="server" RepeatLayout="Flow">
@@ -138,10 +158,19 @@
                                       </ul>
                         </li>--%>
                         <li><a href="contact.html">Liên hệ</a></li>
-                    </ul>
+                       
+                        <li class="menu-has-children"><a href="">Tài Khoản</a>
+                            <ul>
+                                <li><a href="Login.aspx">Đăng Nhập</a></li>
+                                <li><a href="Homepage.aspx">Đăng xuất</a></li>
+                            </ul>
+                        </li>
+                         <li><a href=""><asp:Label ID="label1" runat="server" ></asp:Label></a></li>
+                        
+                      </ul>  
                 </nav>
                 <!-- #nav-menu-container -->
-                      </div>
+            </div>
         </div>
     </header>
 
@@ -169,7 +198,7 @@
                 <div class="col-lg-4 col-md-6 banner-right">
                     <ul class="nav nav-tabs" id="myTab" role="tablist">
                         <li class="nav-item">
-                            <a class="nav-link" id="hotel-tab" data-toggle="tab" href="#hotel" role="tab" aria-controls="hotel" aria-selected="false">Hotels</a>
+                            <a class="nav-link" id="hotel-tab" data-toggle="tab" href="#hotel" role="tab" aria-controls="hotel" aria-selected="false">Login</a>
                         </li>
                         <%--<li class="nav-item">
                             <a class="nav-link" id="holiday-tab" data-toggle="tab" href="#holiday" role="tab" aria-controls="holiday" aria-selected="false">Holidays</a>
@@ -178,13 +207,13 @@
                     <div class="tab-content" id="myTabContent">
                         <div class="tab-pane fade show active" id="flight" role="tabpanel" aria-labelledby="flight-tab">
                             <form class="form-wrap">
-                                <input type="text" class="form-control" name="name" placeholder="From " onfocus="this.placeholder = ''" onblur="this.placeholder = 'From '">
-                                <input type="text" class="form-control" name="to" placeholder="To " onfocus="this.placeholder = ''" onblur="this.placeholder = 'To '">
-                                <input type="text" class="form-control date-picker" name="start" placeholder="Start " onfocus="this.placeholder = ''" onblur="this.placeholder = 'Start '">
+                                <input type="text" class="form-control" name="User" <%--placeholder="From "--%> onfocus="this.placeholder = ''" onblur="this.placeholder = 'From '">
+                                <input type="text" class="form-control" name="Password" <%--placeholder="To "--%> onfocus="this.placeholder = ''" onblur="this.placeholder = 'To '">
+                               <%-- <input type="text" class="form-control date-picker" name="start" placeholder="Start " onfocus="this.placeholder = ''" onblur="this.placeholder = 'Start '">
                                 <input type="text" class="form-control date-picker" name="return" placeholder="Return " onfocus="this.placeholder = ''" onblur="this.placeholder = 'Return '">
                                 <input type="number" min="1" max="20" class="form-control" name="adults" placeholder="Adults " onfocus="this.placeholder = ''" onblur="this.placeholder = 'Adults '">
-                                <input type="number" min="1" max="20" class="form-control" name="child" placeholder="Child " onfocus="this.placeholder = ''" onblur="this.placeholder = 'Child '">
-                                <a href="#" class="primary-btn text-uppercase">Search Hotels</a>
+                                <input type="number" min="1" max="20" class="form-control" name="child" placeholder="Child " onfocus="this.placeholder = ''" onblur="this.placeholder = 'Child '">--%>
+                                <a href="#" class="primary-btn text-uppercase">Login</a>
                             </form>
                         </div>
                         <%--<div class="tab-pane fade" id="holiday" role="tabpanel" aria-labelledby="holiday-tab">
@@ -204,14 +233,14 @@
         </div>
     </section>
     <!-- End banner Area -->
-    <div id="chat" class="auto-style1"  onclick="loadChatbox()" style=": inherit">Chat</div>
-<div class="auto-style2" id="chatbox">
+    <div id="chat"  class="auto-style1"  onclick="loadChatbox()" >Chat với tôi!!!</div>
+<div id="chatbox" class="auto-style2" >
 <span class="chat-text">Travel Chat!</span>
 <script>
 //<![CDATA[
 document.write('<div id="smartchatbox_img901621879" ; width: 280px; height: 450px; overflow: hidden; margin: auto; padding: 0;">');
 document.write('<div id="smartchatbox901621879" style="width: 280px; height: 450px; overflow: hidden; margin: auto; padding: 0; border:0; ">');
-document.write('<iframe width="350" height="430" allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/c79393cc-a017-4992-b319-c2dfc94a82db" scrolling="no" frameborder="0" width="280px" height="450px" style="border:0; margin:0; padding: 0;">');
+document.write('<iframe width="300" height="350" mar allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/c79393cc-a017-4992-b319-c2dfc94a82db">" scrolling="no" frameborder="0" width="280px" height="450px" style="border:0; margin:0; padding: 0;">');
 document.write('</iframe></div></div>');
 //]]>
 </script>
@@ -226,7 +255,9 @@ function closeChatbox(){var e=document.getElementById("chatbox");e.style.margin=
 function minimChatbox(){var e=document.getElementById("minim-chat");e.style.display="none";var e=document.getElementById("maxi-chat");e.style.display="block";var e=document.getElementById("chatbox");e.style.margin="0 0 -460px 0";}
 //]]>
 </script>
- 
+   
+
+
     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
     </asp:ContentPlaceHolder>
     <!-- End recent-blog Area -->
@@ -267,7 +298,6 @@ function minimChatbox(){var e=document.getElementById("minim-chat");e.style.disp
     <!-- start footer Area -->
     <footer class="footer-area section-gap">
         <div class="container">
-
             <%--<div class="row">
 						<div class="col-lg-3  col-md-6 col-sm-6">
 							<div class="single-footer-widget">
@@ -333,7 +363,8 @@ function minimChatbox(){var e=document.getElementById("minim-chat");e.style.disp
 							</div>
 						</div>						
 					</div>--%>
-            
+         
+   
            <%--<iframe height="430" width="350" src="https://bot.dialogflow.com/f96ad684-30f0-4371-ad16-c380ec8189ba"></iframe>--%>
             <div class="row footer-bottom d-flex justify-content-between align-items-center">
                 <p class="col-lg-8 col-sm-12 footer-text m-0">
@@ -367,5 +398,6 @@ function minimChatbox(){var e=document.getElementById("minim-chat");e.style.disp
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/mail-script.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/JavaScript.js"></script>
 </body>
 </html>

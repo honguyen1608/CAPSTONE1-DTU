@@ -1,7 +1,7 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="DetailDestinations.aspx.cs" Inherits="_Default" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="DetailEvent.aspx.cs" Inherits="_Default" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-  <br />
+    <br />
     
     <asp:Repeater ID="Repeater1" runat="server">
         <ItemTemplate>
@@ -16,7 +16,7 @@
                 </tr>
                  <tr>
                     <td colspan="2">
-                        <asp:Image ID="Image1" runat="server" CssClass="auto-style11" Height="750px" Width="1000px" ImageUrl='<%# "./Images/"+ Eval("HINH_ANH_DIA_DIEM") %>' /></a>
+                        <asp:Image ID="Image1" runat="server" CssClass="auto-style11" Height="750px" Width="1000px" ImageUrl='<%# "./Images/"+ Eval("HINH_ANH_SU_KIEN") %>' /></a>
                     </td>
                 </tr>
                 <br />
